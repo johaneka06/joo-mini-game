@@ -7,7 +7,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=Lato:wght@300;400&display=swap" rel="stylesheet">
 <style>
   *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-
+ 
   :root {
     --rose: #e8a0b0;
     --rose-deep: #c0607a;
@@ -19,7 +19,7 @@
     --text-mid: #7a4a5a;
     --text-light: #b07080;
   }
-
+ 
   html, body {
     min-height: 100%;
     font-family: 'Lato', sans-serif;
@@ -27,7 +27,7 @@
     color: var(--text-dark);
     overflow-x: hidden;
   }
-
+ 
   body {
     background:
       radial-gradient(ellipse at 10% 20%, #fce4ec 0%, transparent 50%),
@@ -35,7 +35,7 @@
       radial-gradient(ellipse at 50% 50%, #fff8fa 0%, #fdf0f4 100%);
     min-height: 100vh;
   }
-
+ 
   /* Petals */
   .petal-container {
     position: fixed; top: 0; left: 0;
@@ -44,7 +44,7 @@
     z-index: 0;
     overflow: hidden;
   }
-
+ 
   .petal {
     position: absolute;
     top: -40px;
@@ -55,7 +55,7 @@
     animation: fall linear infinite;
     filter: blur(0.3px);
   }
-
+ 
   @keyframes fall {
     0%   { transform: translateY(0) rotate(0deg) translateX(0); opacity: 0.85; }
     25%  { transform: translateY(25vh) rotate(90deg) translateX(30px); }
@@ -63,7 +63,7 @@
     75%  { transform: translateY(75vh) rotate(270deg) translateX(25px); }
     100% { transform: translateY(110vh) rotate(360deg) translateX(0); opacity: 0; }
   }
-
+ 
   /* Layout */
   .screen {
     display: none;
@@ -74,12 +74,12 @@
     animation: fadeIn 0.6s ease;
   }
   .screen.active { display: flex; flex-direction: column; align-items: center; justify-content: center; }
-
+ 
   @keyframes fadeIn {
     from { opacity: 0; transform: translateY(20px); }
     to   { opacity: 1; transform: translateY(0); }
   }
-
+ 
   /* Card */
   .card {
     background: rgba(255,255,255,0.88);
@@ -92,11 +92,11 @@
     box-shadow: 0 8px 48px rgba(200, 80, 110, 0.1);
     text-align: center;
   }
-
+ 
   .card-sm {
     max-width: 480px;
   }
-
+ 
   /* Typography */
   h1 {
     font-family: 'Playfair Display', serif;
@@ -105,7 +105,7 @@
     line-height: 1.25;
     margin-bottom: 0.5rem;
   }
-
+ 
   h2 {
     font-family: 'Playfair Display', serif;
     font-size: clamp(1.2rem, 3.5vw, 1.6rem);
@@ -113,7 +113,7 @@
     margin-bottom: 1rem;
     line-height: 1.4;
   }
-
+ 
   .subtitle {
     font-size: 0.95rem;
     color: var(--text-light);
@@ -121,7 +121,7 @@
     margin-bottom: 2rem;
     font-style: italic;
   }
-
+ 
   .question-number {
     font-size: 0.8rem;
     letter-spacing: 0.1em;
@@ -130,7 +130,7 @@
     margin-bottom: 1rem;
     font-weight: 400;
   }
-
+ 
   /* Progress bar */
   .progress-bar {
     width: 100%;
@@ -140,14 +140,14 @@
     margin-bottom: 2rem;
     overflow: hidden;
   }
-
+ 
   .progress-fill {
     height: 100%;
     background: linear-gradient(90deg, var(--rose), var(--rose-deep));
     border-radius: 99px;
     transition: width 0.5s ease;
   }
-
+ 
   /* Options */
   .options {
     display: flex;
@@ -155,7 +155,7 @@
     gap: 0.75rem;
     margin-top: 1.5rem;
   }
-
+ 
   .option-btn {
     background: white;
     border: 1.5px solid rgba(220,130,160,0.35);
@@ -171,14 +171,14 @@
     align-items: center;
     gap: 0.75rem;
   }
-
+ 
   .option-btn:hover {
     background: var(--rose-pale);
     border-color: var(--rose);
     color: var(--rose-deep);
     transform: translateX(4px);
   }
-
+ 
   .option-btn.correct {
     background: #f0fff4;
     border-color: #68d391;
@@ -186,7 +186,7 @@
     pointer-events: none;
     animation: correctPop 0.4s ease;
   }
-
+ 
   .option-btn.wrong {
     background: #fff5f5;
     border-color: #fc8181;
@@ -194,26 +194,26 @@
     pointer-events: none;
     animation: shake 0.4s ease;
   }
-
+ 
   .option-btn.disabled {
     pointer-events: none;
     opacity: 0.5;
   }
-
+ 
   @keyframes correctPop {
     0%   { transform: scale(1); }
     50%  { transform: scale(1.03); }
     100% { transform: scale(1); }
   }
-
+ 
   @keyframes shake {
     0%, 100% { transform: translateX(0); }
     25%  { transform: translateX(-6px); }
     75%  { transform: translateX(6px); }
   }
-
+ 
   .option-icon { font-size: 1.2rem; min-width: 1.5rem; }
-
+ 
   /* Feedback message */
   .feedback {
     margin-top: 1rem;
@@ -223,7 +223,7 @@
     min-height: 1.4rem;
     transition: opacity 0.3s;
   }
-
+ 
   /* Buttons */
   .btn-primary {
     background: linear-gradient(135deg, var(--rose), var(--rose-deep));
@@ -239,16 +239,16 @@
     transition: all 0.25s ease;
     box-shadow: 0 4px 20px rgba(192, 96, 122, 0.3);
   }
-
+ 
   .btn-primary:hover {
     transform: translateY(-2px);
     box-shadow: 0 8px 28px rgba(192, 96, 122, 0.4);
   }
-
+ 
   .btn-primary:active {
     transform: translateY(0);
   }
-
+ 
   /* Score badge */
   .score-badge {
     display: inline-block;
@@ -260,7 +260,7 @@
     font-weight: 400;
     margin-bottom: 1rem;
   }
-
+ 
   /* Hearts decoration */
   .hearts {
     font-size: 1.8rem;
@@ -268,12 +268,12 @@
     letter-spacing: 0.3em;
     animation: heartbeat 2s ease-in-out infinite;
   }
-
+ 
   @keyframes heartbeat {
     0%, 100% { transform: scale(1); }
     50%       { transform: scale(1.1); }
   }
-
+ 
   /* Divider */
   .divider {
     width: 60px;
@@ -281,7 +281,7 @@
     background: linear-gradient(90deg, transparent, var(--rose), transparent);
     margin: 1.2rem auto;
   }
-
+ 
   /* Final screen special */
   .final-message {
     font-family: 'Playfair Display', serif;
@@ -291,7 +291,7 @@
     line-height: 1.8;
     margin: 1rem 0 1.5rem;
   }
-
+ 
   .the-question {
     background: linear-gradient(135deg, #fce4ec, #fff0f5);
     border: 1.5px solid var(--rose);
@@ -304,13 +304,13 @@
     line-height: 1.7;
     font-style: italic;
   }
-
+ 
   .the-question strong {
     color: var(--rose-deep);
     font-style: normal;
     font-weight: 600;
   }
-
+ 
   /* Confetti animation on final */
   .confetti-star {
     position: fixed;
@@ -319,24 +319,59 @@
     animation: confettiFall 3s ease-out forwards;
     font-size: 1.2rem;
   }
-
+ 
   @keyframes confettiFall {
     0%   { transform: translateY(0) rotate(0deg); opacity: 1; }
     100% { transform: translateY(80vh) rotate(720deg); opacity: 0; }
   }
-
+ 
   .name-highlight {
     color: var(--rose-deep);
     font-family: 'Playfair Display', serif;
     font-style: italic;
   }
-
+ 
   /* Score stars */
   .stars {
     font-size: 1.5rem;
     margin: 0.5rem 0;
   }
-
+ 
+  /* Message screen */
+  .message-textarea {
+    width: 100%;
+    min-height: 140px;
+    border: 1.5px solid rgba(220,130,160,0.4);
+    border-radius: 16px;
+    padding: 1rem 1.1rem;
+    font-family: 'Lato', sans-serif;
+    font-size: 0.97rem;
+    color: var(--text-dark);
+    background: rgba(255,255,255,0.8);
+    resize: none;
+    outline: none;
+    line-height: 1.7;
+    transition: border-color 0.2s, box-shadow 0.2s;
+    margin-top: 1.2rem;
+  }
+ 
+  .message-textarea::placeholder {
+    color: var(--text-light);
+    font-style: italic;
+  }
+ 
+  .message-textarea:focus {
+    border-color: var(--rose);
+    box-shadow: 0 0 0 3px rgba(232,160,176,0.2);
+  }
+ 
+  .char-count {
+    text-align: right;
+    font-size: 0.78rem;
+    color: var(--text-light);
+    margin-top: 0.4rem;
+  }
+ 
   @media (max-width: 480px) {
     .card { padding: 2rem 1.25rem; border-radius: 18px; }
   }
@@ -375,7 +410,32 @@
   </div>
 </div>
 
-<!-- Screen 3: Final -->
+<!-- Screen 3: Message from Alycia -->
+<div class="screen" id="screen-message">
+  <div class="card">
+    <div class="hearts">✍️ 💌 🌸</div>
+    <h1 style="font-size: clamp(1.4rem, 4vw, 2rem);">Hampir selesai!</h1>
+    <div class="divider"></div>
+    <p style="color: var(--text-mid); font-size: 0.97rem; line-height: 1.7;">
+      Sebelum ke page terakhir... ada satu hal yang ingin aku dengerin.
+    </p>
+    <p style="font-family: 'Playfair Display', serif; font-style: italic; color: var(--text-dark); font-size: 1.05rem; margin-top: 1rem; margin-bottom: 1rem; line-height: 1.7;">
+      "Pesan atau kesan apa yang ingin kamu sampaikan ke Johan?"
+    </p>
+    <p style="color: var(--text-mid); font-size: 0.97rem; line-height: 1.7;">
+      Tulis aja dibawah ini 💌
+    </p>
+    <textarea
+      class="message-textarea"
+      id="alycia-message"
+      placeholder="Tuliskan pesanmu di sini..."
+    ></textarea>
+    <button class="btn-primary" id="submit-btn" onclick="submitMessage()">Lanjut ke Pertanyaan Terakhir 🌸</button>
+    <p id="send-status" style="font-size:0.85rem; color: var(--text-light); font-style: italic; margin-top: 0.75rem; min-height: 1.2rem;"></p>
+  </div>
+</div>
+
+<!-- Screen 4: Final -->
 <div class="screen" id="screen-final">
   <div class="card">
     <div class="hearts" id="final-hearts">💖 🌸 💖</div>
@@ -386,57 +446,22 @@
       Kamu sudah menjawab semua pertanyaan dengan sangat baik...
     </p>
     <div class="the-question">
-      Untuk <strong>pertanyaan terakhir</strong>, tanyakan ke cowok yang ada di depanmu saat ini — pertanyaannya apa? 🌸
+      Eitsss.... Masih ada <strong>pertanyaan terakhir</strong>, coba tanyain ke cowok yang ngajak kamu keluar : pertanyaannya apa? 🌸
     </div>
-    <p style="font-size:0.85rem; color: var(--text-light); font-style: italic;">
+    <!-- <p style="font-size:0.85rem; color: var(--text-light); font-style: italic;">
       — dengan sepenuh hati, <span class="name-highlight">Johan</span>
-    </p>
+    </p> -->
   </div>
 </div>
 
 <script>
 const questions = [
   {
-    q: "Warna apa yang paling sering ada di langit ketika matahari terbenam?",
-    opts: ["🔵 Biru", "🟡 Kuning", "🟠 Oranye & pink", "⚫ Hitam"],
-    answer: 2,
-    right: "Betul! Langit senja memang selalu romantis 🌅",
-    wrong: "Hmm, coba perhatikan langit sore-sore ya! 🌅"
-  },
-  {
-    q: "Bunga apa yang paling identik dengan perasaan cinta?",
-    opts: ["🌻 Bunga matahari", "🌹 Mawar merah", "💐 Bunga anggrek", "🌼 Bunga aster"],
-    answer: 1,
-    right: "Tepat sekali! Mawar merah memang tak tergantikan 🌹",
-    wrong: "Jawabannya mawar merah dong! 🌹"
-  },
-  {
-    q: "Dalam film romantis, apa yang biasanya terjadi di bawah hujan?",
-    opts: ["😤 Pertengkaran sengit", "💋 Momen dramatis yang indah", "☔ Mereka buru-buru pulang", "😴 Tidak ada yang terjadi"],
-    answer: 1,
-    right: "Yesss! Adegan hujan selalu bikin baper! 🌧️",
-    wrong: "Adegan hujan di film itu selalu romantis lo! 🌧️"
-  },
-  {
     q: "Planet apa yang sering disebut sebagai 'planet cinta'?",
     opts: ["🪐 Saturnus", "🔴 Mars", "💫 Venus", "🌍 Bumi"],
     answer: 2,
     right: "Venus! Sang dewi kecantikan dan cinta ✨",
     wrong: "Itu Venus! Dewi kecantikan dan cinta 💫"
-  },
-  {
-    q: "Apa bahasa Perancis untuk 'aku mencintaimu'?",
-    opts: ["Te amo", "Je t'aime", "Ti amo", "Ich liebe dich"],
-    answer: 1,
-    right: "Ooh, kamu tahu bahasa Prancis! Très romantique! 🇫🇷",
-    wrong: "Jawabannya 'Je t'aime'! Bahasa cinta dari Paris 🗼"
-  },
-  {
-    q: "Bulan purnama identik dengan suasana apa?",
-    opts: ["😨 Menyeramkan", "✨ Romantis & ajaib", "😪 Mengantuk", "🌪️ Badai"],
-    answer: 1,
-    right: "Bulan purnama itu memang magis dan romantis ya! 🌕",
-    wrong: "Bulan purnama itu selalu terasa romantis dan ajaib! 🌕"
   },
   {
     q: "Musim apa yang paling identik dengan bunga-bunga bermekaran?",
@@ -446,25 +471,24 @@ const questions = [
     wrong: "Musim semi! Saat semua bunga mekar dengan cantik 🌸"
   },
   {
-    q: "Di bintang rasi apa kita bisa menemukan 'Orion', sang pemburu?",
-    opts: ["Ursa Major", "Scorpius", "Cassiopeia", "Orion — itu namanya sendiri!"],
-    answer: 3,
-    right: "Haha, iya dong! Rasi Orion ya namanya sendiri 😄⭐",
-    wrong: "Orion adalah rasi bintangnya sendiri! Orion constellation 😄"
-  },
-  {
-    q: "Dalam cerita dongeng, siapa yang memberikan ciuman untuk membangunkan Sleeping Beauty?",
-    opts: ["🧙‍♂️ Penyihir baik", "🤴 Pangeran tampan", "🧚 Peri", "👸 Ratu"],
-    answer: 1,
-    right: "Sang Pangeran! Karena cinta bisa membangunkan siapapun 💝",
-    wrong: "Sang Pangeran! Cinta memang bisa segalanya 💝"
-  },
-  {
-    q: "Apa yang biasanya dilakukan pasangan saat kencan pertama yang berkesan?",
-    opts: ["📺 Nonton TV di rumah masing-masing", "🚶 Jalan bareng, ngobrol, dan tertawa", "💼 Kerja lembur bareng", "😴 Tidur lebih awal"],
+    q: "Masih inget waktu pertama kita nge-date, yang kita lakuin apa?",
+    opts: ["📺 Nonton TV di rumah masing-masing", "🚶 Makan, Nonton horror, jalan bareng, ngobrol, dan ketawa", "💼 Kerja lembur bareng", "😴 Tidur lebih awal"],
     answer: 1,
     right: "Tepat! Momen sederhana tapi penuh makna yang tak terlupakan 💫",
-    wrong: "Jawabannya jalan bareng dan ngobrol! Sederhana tapi bermakna 💫"
+    wrong: "Jawabannya Makan, Nonton horror, jalan bareng, ngobrol, dan ketawa! Sederhana tapi bermakna 💫"
+  },
+  {
+    q: "Kalau ada waktu luang, kita sama sama suka ngapain?",
+    opts: ["🏊🏻‍♀️ Olahraga", "😪 Tidur", "🍳 Masak", "✈️ Travelling"],
+    answer: 1,
+    right: "Betul! Kita sama sama suka tidur 💤💤",
+    wrong: "Hmm, coba diinget inget, siang siang kamu tidur, aku juga ikutan 😋"
+  },
+  {
+    q: "Menurutmu, kenapa mini-game ini dibuat?",
+    opts: ["🤪 Random aja", "📖 Belajar bikin website", "😴 Gabut", "🤩 Ada something dibalik ini"],
+    answer: "all",
+    list_resp: ["HEHEHE tau aja kalau anaknya random 🤪", "Emang iya ya? HAHAHA 🤣", "HAHAHA gabutnya bikin beginian yaa 🤣", "Hayo penasaran kan apa yang jadi motif dibalik ini? 😝"]
   }
 ];
 
@@ -524,10 +548,14 @@ function selectAnswer(chosen, btn) {
   const q = questions[current];
   const allBtns = document.querySelectorAll('.option-btn');
 
-  if (chosen === q.answer) {
+  if (chosen === q.answer || q.answer == 'all') {
     btn.classList.add('correct');
     score++;
-    document.getElementById('feedback-text').textContent = q.right;
+    if(chosen === q.answer) {
+      document.getElementById('feedback-text').textContent = q.right;
+    } else {
+      document.getElementById('feedback-text').textContent = q.list_resp[chosen];
+    }
     allBtns.forEach((b, i) => { if (i !== chosen) b.classList.add('disabled'); });
   } else {
     btn.classList.add('wrong');
@@ -547,10 +575,60 @@ function selectAnswer(chosen, btn) {
 }
 
 function showFinal() {
+  document.getElementById('alycia-message').value = null
+  showScreen('screen-message');
+}
+
+async function submitMessage() {
+  const msg = document.getElementById('alycia-message').value.trim();
+  const btn = document.getElementById('submit-btn');
+  const status = document.getElementById('send-status');
+ 
+  if (!msg) {
+    status.style.color = 'var(--rose-deep)';
+    status.textContent = 'Tulis pesanmu dulu ya, jangan dikosongkan 🌸';
+    return;
+  }
+ 
+  btn.disabled = true;
+  btn.textContent = 'Mengirim... 💌';
+  status.style.color = 'var(--text-light)';
+  status.textContent = 'Sedang mengirim pesanmu...';
+ 
+  try {
+    const res = await fetch('https://formspree.io/f/xqeopdgy', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+      body: JSON.stringify({
+        subject: '💌 Message income from Alycia Madeleine',
+        pesan: msg,
+        skor: score + ' dari ' + questions.length
+      })
+    });
+ 
+    if (res.ok) {
+      status.style.color = '#68d391';
+      status.textContent = 'Pesan terkirim! ✨';
+      setTimeout(() => goToFinal(), 900);
+    } else {
+      throw new Error('failed');
+    }
+  } catch (e) {
+    btn.disabled = false;
+    btn.textContent = 'Lanjut ke Pertanyaan Terakhir 🌸';
+    status.style.color = 'var(--rose-deep)';
+    status.textContent = 'Gagal mengirim, coba lagi ya 🙏';
+  }
+}
+ 
+function goToFinal() {
   const pct = score / questions.length;
   let title, msg;
 
-  if (pct >= 0.9) {
+  if (pct == 1) {
+    title = "Wah, kamu luar biasa! 🌟";
+    msg = "Kamu menjawab semua pertanyaan dengan sempurna. Memang lulusan kedokteran beda...";
+  } else if (pct >= 0.9) {
     title = "Wah, kamu luar biasa! 🌟";
     msg = "Kamu menjawab hampir semua pertanyaan dengan sempurna. Ternyata kamu memang seseorang yang istimewa...";
   } else if (pct >= 0.7) {
